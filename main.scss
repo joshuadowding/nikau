@@ -5,12 +5,6 @@
  * Authored by: Joshua Dowding, 2019-20
  */
 
-// Default Blue: #3094FF;
-// Default Gold: #DAA520;
-// Default Grey: #EEF1F4;
-// Alternative Grey: #DDD;
-// Default Black: #1A1A1A;
-
 h1 {
 	&.entry-title {
 		padding: 16px 0;
@@ -374,19 +368,6 @@ body {
 		background-color: #f5f5f5;
 	}
 
-	&.single-post {
-		background-color: #fff;
-
-		.blog-wrap,
-		.singlepost-wrap {
-			.sidebar#secondary {
-				.widget {
-					background-color: #f5f5f5;
-				}
-			}
-		}
-	}
-
 	&.blog {
 		.blog-wrap {
 			.site-content#primary {
@@ -480,6 +461,17 @@ body {
 	}
 
 	&.page {
+		background-color: #fff;
+
+		.blog-wrap,
+		.singlepost-wrap {
+			.sidebar#secondary {
+				.widget {
+					background-color: #f5f5f5;
+				}
+			}
+		}
+
 		.blog-wrap {
 			.site-content#primary {
 				.hentry {
@@ -501,7 +493,7 @@ body {
 					}
 
 					.entry-content {
-						p, a, span, div, ul, li {
+						p, ul, li {
 							font-size: 1.1rem;
 						}
 
@@ -518,6 +510,124 @@ body {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+
+	// "Single" Blog Post
+	&.single {
+		background-color: #fff;
+
+		.blog-wrap,
+		.singlepost-wrap {
+			.hentry {
+				.entry-header {
+					.title-wrap {
+						background-color: rgba(0, 0, 0, .65);
+						padding-top: 35px;
+					}
+		
+					.entry-meta {
+						border: 0;
+						padding: 0;
+					}
+				}
+		
+				.entry-content {
+					margin: 0;
+		
+					p, ul, li {
+						font-size: 1.1rem;
+					}
+		
+					img {
+						border-radius: 0;
+					}
+		
+					a {
+						text-decoration: underline;
+						color: #1A1A1A;
+		
+						&:hover {
+							color: #3094FF;
+						}
+					}
+				}
+		
+				.entry-footer {
+					background-color: #f5f5f5;
+					padding: 24px;
+					margin: 16px 0 0 0;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+		
+					.entry-tags {
+						padding: 0;
+		
+						span {
+							&::after {
+								content: ': ';
+								padding: 0;
+							}
+						}
+		
+						a {
+							text-decoration: underline;
+		
+							&:hover {
+								color: #3094FF;
+							}
+						}
+					}
+				}
+		
+				.comments-area#comments {
+					background-color: #f5f5f5;
+					padding: 24px;
+					margin: 16px 0 0 0;
+					border-radius: 0;
+		
+					.comments-title {
+						border: 0;
+						padding: 0;
+					}
+		
+					.comments-content {
+						.comment-respond#respond {
+							margin: 32px 0 0 0;
+							padding: 0;
+		
+							.comment-reply-title#reply-title {
+								letter-spacing: unset;
+							}
+						}
+					}
+		
+					.akismet_comment_form_privacy_notice {
+						margin: 16px 0 0 0;
+		
+						.customize-unpreviewable {
+							text-decoration: underline;
+						}
+					}
+				}
+		
+				.post-navigation {
+					display: none;
+				}
+		
+				#jp-post-flair {
+					background-color: #f5f5f5;
+					margin: 64px 0 0 0;
+					padding: 24px;
+					border-radius: 0;
+				}
+			}
+
+			.sidebar#secondary {
+				.widget {
+					background-color: #f5f5f5;
 				}
 			}
 		}
@@ -627,109 +737,9 @@ body {
 		}
 	}
 
-	// 'Featured Content'
-	.featured-content {
-		.featured-slider {
-			.meta-main-wrap {
-				background: linear-gradient(to right, rgba(26, 26, 26, .75) 65%, transparent 100%);
-				padding: 32px 0;
-
-				.entry-header {
-					.entry-cats {
-						a {
-							display: inline-block;
-							background-color: white;
-							padding: 5px 10px;
-							margin: 0 5px 0 0;
-							border-radius: 0;
-							line-height: 11px;
-							text-align: center;
-							color: #1A1A1A;
-							font-weight: 600;
-
-							&:hover {
-								background-color: #3094FF;
-								color: white;
-							}
-						}
-					}
-
-					.entry-title {
-						padding: 8px 0 0 0;
-						letter-spacing: 1px;
-
-						a {
-							&:hover {
-								color: #3094FF;
-							}
-						}
-					}
-				}
-
-				.entry-meta {
-					.entry-author {
-						display: none;
-					}
-
-					.entry-date {
-						&::before {
-							content: '';
-						}
-
-						a {
-							&:hover {
-								color: #3094FF;
-							}
-						}
-					}
-
-					.entry-comments {
-						a {
-							&:hover {
-								color: #3094FF;
-							}
-						}
-					}
-				}
-			}
-
-			.slick-arrow {
-				background-color: #1A1A1A;
-
-				&:hover {
-					background-color: #3094FF;
-
-					&::after {
-						color: white;
-					}
-				}
-
-				&.slick-prev {
-					border-top-left-radius: 0;
-				}
-			}
-		}
-	}
-
-	.overlay-wrap {
-		display: none;
-	}
-
-	.slideshow-window,
-	.jetpack-slideshow {
-		border-radius: 0 !important;
-	}
-
+	// Sidebar & Sidebar Widgets (default - applies to .blog, .page and .single)
 	.blog-wrap,
 	.singlepost-wrap {
-		.site-content {
-			.blog-title {
-				border: 0;
-				padding: 0 0 24px 0;
-			}
-		}
-
-		// Body Sidebar & Widgets
 		.sidebar#secondary {
 			.widget {
 				border: 0;
@@ -821,110 +831,101 @@ body {
 		}
 	}
 
-	.singlepost-wrap {
-		.entry-header {
-			.title-wrap {
-				background-color: rgba(0, 0, 0, .65);
-				padding-top: 35px;
+	.overlay-wrap {
+		display: none;
+	}
+
+	// 'Featured Content' Widget
+	.featured-content {
+		.featured-slider {
+			.meta-main-wrap {
+				background: linear-gradient(to right, rgba(26, 26, 26, .75) 65%, transparent 100%);
+				padding: 32px 0;
+
+				.entry-header {
+					.entry-cats {
+						a {
+							display: inline-block;
+							background-color: white;
+							padding: 5px 10px;
+							margin: 0 5px 0 0;
+							border-radius: 0;
+							line-height: 11px;
+							text-align: center;
+							color: #1A1A1A;
+							font-weight: 600;
+
+							&:hover {
+								background-color: #3094FF;
+								color: white;
+							}
+						}
+					}
+
+					.entry-title {
+						padding: 8px 0 0 0;
+						letter-spacing: 1px;
+
+						a {
+							&:hover {
+								color: #3094FF;
+							}
+						}
+					}
+				}
+
+				.entry-meta {
+					.entry-author {
+						display: none;
+					}
+
+					.entry-date {
+						&::before {
+							content: '';
+						}
+
+						a {
+							&:hover {
+								color: #3094FF;
+							}
+						}
+					}
+
+					.entry-comments {
+						a {
+							&:hover {
+								color: #3094FF;
+							}
+						}
+					}
+				}
 			}
 
-			.entry-meta {
-				border: 0;
-				padding: 0;
-			}
-		}
-
-		.entry-content {
-			margin: 0;
-
-			p, a, span, div, ul, li {
-				font-size: 1.1rem;
-			}
-
-			img {
-				border-radius: 0;
-			}
-
-			a {
-				text-decoration: underline;
-				color: #1A1A1A;
+			.slick-arrow {
+				background-color: #1A1A1A;
 
 				&:hover {
-					color: #3094FF;
-				}
-			}
-		}
+					background-color: #3094FF;
 
-		.entry-footer {
-			background-color: #f5f5f5;
-			padding: 24px;
-			margin: 16px 0 0 0;
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-
-			.entry-tags {
-				padding: 0;
-
-				span {
 					&::after {
-						content: ': ';
-						padding: 0;
+						color: white;
 					}
 				}
 
-				a {
-					text-decoration: underline;
-
-					&:hover {
-						color: #3094FF;
-					}
+				&.slick-prev {
+					border-top-left-radius: 0;
 				}
 			}
-		}
-
-		.comments-area#comments {
-			background-color: #f5f5f5;
-			padding: 24px;
-			margin: 16px 0 0 0;
-			border-radius: 0;
-
-			.comments-title {
-				border: 0;
-				padding: 0;
-			}
-
-			.comments-content {
-				.comment-respond#respond {
-					margin: 32px 0 0 0;
-					padding: 0;
-
-					.comment-reply-title#reply-title {
-						letter-spacing: unset;
-					}
-				}
-			}
-
-			.akismet_comment_form_privacy_notice {
-				margin: 16px 0 0 0;
-
-				.customize-unpreviewable {
-					text-decoration: underline;
-				}
-			}
-		}
-
-		.post-navigation {
-			display: none;
-		}
-
-		#jp-post-flair {
-			background-color: #f5f5f5;
-			margin: 64px 0 0 0;
-			padding: 24px;
-			border-radius: 0;
 		}
 	}
 
+	// 'Slideshow' Widget
+	.slideshow-window,
+	.jetpack-slideshow {
+		border-radius: 0 !important;
+	}
+
+	// 'Recommended Posts' Component
 	.recommended-posts-wrap {
 		padding: 64px 0 0 0;
 
@@ -1202,7 +1203,4 @@ body {
 	display: none !important;
 }
 
-/*
- * Notes:
- * - WordPress Customiser doesn't support SASS variables (April 2020)
- */
+// NOTE: WordPress Customizer doesn't support SASS variables/mixins (April 2020)
