@@ -32,7 +32,7 @@ figure {
 	display: flex;
 	flex-direction: column;
 	background-color: #f5f5f5;
-	margin-bottom: 30px !important;
+	margin: 0 0 24px 0 !important;
 	border-radius: 0;
 	line-height: 1.6;
 
@@ -66,15 +66,17 @@ figure {
 
 blockquote {
 	border: 0 !important;
-	padding: 0 !important;
-	margin: 0 0 30px 0 !important;
+	padding: 16px !important;
+	margin: 0 0 24px 0 !important;
+	background-color: #f5f5f5;
 
 	p,
 	i,
 	span {
-		font-size: 1.4rem !important;
-		font-weight: 600 !important;
+		font-size: 1.1rem !important;
+		font-weight: 500 !important;
 		line-height: 1.6 !important;
+		margin: 0 !important;
 	}
 }
 
@@ -536,25 +538,88 @@ body {
 		
 				.entry-content {
 					margin: 0;
-		
-					p, ul, li {
-						font-size: 1.1rem;
+
+					h1 {
+						font-size: 2.4rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
 					}
-		
+
+					h2 {
+						font-size: 2.2rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					h3 {
+						font-size: 2rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					h4 {
+						font-size: 1.8rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					h5 {
+						font-size: 1.6rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					h6 {
+						font-size: 1.4rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					p {
+						font-size: 1.1rem;
+						line-height: 1.6;
+						padding: 0;
+						margin: 0 0 24px 0;
+					}
+
+					ul {
+						padding: 0;
+						margin: 0 0 24px 24px;
+					}
+
+					ul, li {
+						font-size: 1.1rem;
+						line-height: 1.6;
+					}
+
 					img {
 						border-radius: 0;
 					}
-		
+
 					a {
 						text-decoration: underline;
 						color: #1A1A1A;
-		
+
 						&:hover {
 							color: #3094FF;
 						}
 					}
+
+					.wp-block-group {
+						margin: 0 0 24px 0;
+					}
+
+					.wp-block-jetpack-slideshow {
+						margin: 0;
+					}
 				}
-		
+
 				.entry-footer {
 					background-color: #f5f5f5;
 					padding: 24px;
@@ -581,7 +646,7 @@ body {
 						}
 					}
 				}
-		
+
 				.comments-area#comments {
 					background-color: #f5f5f5;
 					padding: 24px;
@@ -612,16 +677,22 @@ body {
 						}
 					}
 				}
-		
+
 				.post-navigation {
 					display: none;
 				}
-		
+
 				#jp-post-flair {
 					background-color: #f5f5f5;
 					margin: 64px 0 0 0;
 					padding: 24px;
 					border-radius: 0;
+
+					.sd-title {
+						font-size: 1.2rem;
+						padding: 0 0 6px;
+						margin: 0;
+					}
 				}
 			}
 
@@ -633,6 +704,7 @@ body {
 		}
 	}
 
+	// Blog Posts (default - applies to .blog and .page)
 	.blog-wrap {
 		.site-content#primary {
 			.blog-title {
@@ -737,7 +809,7 @@ body {
 		}
 	}
 
-	// Sidebar & Sidebar Widgets (default - applies to .blog, .page and .single)
+	// Sidebar & Sidebar Widgets (default - applies to .blog, .page, and .single)
 	.blog-wrap,
 	.singlepost-wrap {
 		.sidebar#secondary {
@@ -831,10 +903,6 @@ body {
 		}
 	}
 
-	.overlay-wrap {
-		display: none;
-	}
-
 	// 'Featured Content' Widget
 	.featured-content {
 		.featured-slider {
@@ -919,7 +987,7 @@ body {
 		}
 	}
 
-	// 'Slideshow' Widget
+	// Classic 'Slideshow' Widget
 	.slideshow-window,
 	.jetpack-slideshow {
 		border-radius: 0 !important;
@@ -945,6 +1013,11 @@ body {
 				}
 			}
 		}
+	}
+
+	// "strange full-screen sidebar overlay"
+	.overlay-wrap {
+		display: none;
 	}
 }
 
