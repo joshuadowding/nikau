@@ -28,6 +28,16 @@ a {
 	}
 }
 
+::selection {
+	background: #3094FF;
+	color: white;
+}
+
+::-moz-selection {
+	background: #3094FF;
+	color: white;
+}
+
 figure {
 	display: flex;
 	flex-direction: column;
@@ -825,7 +835,7 @@ body {
 				border-radius: 0;
 
 				.sd-title {
-					font-size: 1.2rem;
+					font-size: 1rem;
 					padding: 0 0 6px;
 					margin: 0;
 				}
