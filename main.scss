@@ -546,6 +546,20 @@ body {
 		}
 	}
 
+	&.archive {
+		.blog-wrap {
+			.site-content#primary {
+				.hentry {
+					&:nth-child(2) {
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	// Blog Posts (default - applies to .blog and .page)
 	.blog-wrap {
 		.site-content#primary {
