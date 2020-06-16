@@ -567,6 +567,16 @@ body {
 				display: none;
 			}
 
+			.infinite-wrap {
+				.hentry {
+					&:nth-child(2) {
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+
 			.hentry {
 				padding: 32px;
 				border: 0;
