@@ -549,6 +549,16 @@ body {
 	&.archive {
 		.blog-wrap {
 			.site-content#primary {
+				.archive-header {
+					.taxonomy-description {
+						padding: 0 0 24px 0;
+
+						p {
+							margin: 0;
+						}
+					}
+				}
+
 				.hentry {
 					&:nth-child(2) {
 						&::before {
