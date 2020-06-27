@@ -116,6 +116,9 @@ header {
 				background-color: #f5f5f5 !important;
 
 				.overlay-btn#overlay-close {
+					color: #1A1A1A;
+					background-color: transparent;
+
 					&:hover {
 						color: #3094FF;
 					}
@@ -153,12 +156,18 @@ header {
 
 		.sticky-header {
 			.search-open {
+				color: #1A1A1A;
+				background-color: white;
+
 				&:hover {
 					color: #3094FF;
 				}
 			}
 
 			.overlay-open {
+				color: #1A1A1A;
+				background-color: white;
+
 				&:hover {
 					color: #3094FF;
 				}
@@ -213,6 +222,9 @@ header {
 			}
 
 			.search-open {
+				color: #1A1A1A;
+				background-color: white;
+
 				&:hover {
 					color: #3094FF;
 				}
