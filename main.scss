@@ -230,6 +230,15 @@ header {
 				}
 			}
 
+			.overlay-open {
+				color: #1A1A1A;
+				background-color: white;
+
+				&:hover {
+					color: #3094FF;
+				}
+			}
+
 			.jetpack-social-navigation {
 				#menu-social {
 					.menu-item {
